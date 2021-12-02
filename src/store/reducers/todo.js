@@ -5,9 +5,10 @@ const initState = {
     undoneData: [],
     loading: false,
     error: false
-}
+};
 
-export default (state = initState, action ={}) => {
+// eslint-disable-next-line import/no-anonymous-default-export
+export default (state = initState, action = {}) => {
     switch(action.type) {
         case ACTIONS.LOADING: {
             return {
@@ -72,4 +73,4 @@ export default (state = initState, action ={}) => {
             return state
         }
     }
-}
+};
