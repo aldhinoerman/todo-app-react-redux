@@ -1,16 +1,29 @@
 import React from 'react'
-// import { connect } from "react-redux";
-// import { doneActionTodo, undoneActionTodo } from "../../store/actions/todo";
-// import Card from '../Card';
+import Tasks from './index'
 
 const TaskLists = (props) => {
-    // const { data, done, index, actionDone, actionUdone } = props
+    const { totalList, loading, data } = props
+
+    const renderItem = () => {
+        if (data.length === 0) {
+            return (<p>No Item!</p>)
+        } else {
+            return data.map((item, idx) => {
+                return (
+                    <Tasks data={item} index={idx} done={false} />
+                )
+            })
+        }
+    }
 
     return (
         <>
             <h2 className="text-center">Tasks</h2>
-
-            {/* <Card key={data.id}></Card> */}
+            {/* Input data */}
+            {loading ?
+                <p>Loading...</p> :
+                renderItem()
+            }
         </>
     )
 }

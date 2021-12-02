@@ -1,16 +1,30 @@
 import React from 'react'
-import CompleteTasks from './CompleteTasks'
-import TaskLists from './TaskLists'
+import { connect } from 'react-redux'
+import Card from '../Card'
+// import { doneActionTodo, undoneActionTodo } from '../../store/actions/todo'
 
 import './Tasks.scss'
 
-const Tasks = () => {
+const Tasks = (props) => {
+    const { data } = props
+
     return (
-        <div className="grid col-2">
-            <TaskLists />
-            <CompleteTasks />
-        </div>
+        <>
+            <Card key={data.id}>
+                <h4>{data.title}</h4>
+                <p className="text-muted">{data.description}</p>
+            </Card>
+        </>
     )
 }
 
-export default Tasks
+function mapStateToProps(state) {
+    return {}
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Tasks)
