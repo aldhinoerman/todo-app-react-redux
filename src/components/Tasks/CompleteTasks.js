@@ -2,7 +2,7 @@ import React from 'react'
 import Tasks from './index'
 
 const CompleteTasks = (props) => {
-    const { totalList, loading, data } = props
+    const { loading, data } = props
 
     const renderItem = () => {
         return data.map((item, idx) => {
@@ -13,12 +13,14 @@ const CompleteTasks = (props) => {
     }
     return (
         <>
-            <h2 className="text-center">Complete</h2>
+            <div>
+                <h2 className="text-center">Complete</h2>
 
-            {loading ?
-                <p>Loading...</p> :
-                renderItem()
-            }
+                {loading ?
+                    <p>Loading...</p> :
+                    renderItem()
+                }
+            </div>
         </>
     )
 }

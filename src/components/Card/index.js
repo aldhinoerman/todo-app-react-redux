@@ -2,9 +2,10 @@ import React from 'react'
 
 import './Card.scss'
 
-const Card = ({ children }) => {
+const Card = (props) => {
+    const { children, onClick } = props
     return (
-        <div className="card">
+        <div className="card" onClick={onClick}>
             {children}
         </div>
     )

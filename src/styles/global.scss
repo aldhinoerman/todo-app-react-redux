@@ -50,8 +50,13 @@ html {
     display: grid;
     text-align: center;
     gap: 1rem;
+    margin-top: 2.5rem;
 
-    &.col-2 {
-        grid-template-columns: 1fr 1fr;
+    &.col-2-gr {
+        grid-template-columns: auto;
+
+        @include breakpoint(md) {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }

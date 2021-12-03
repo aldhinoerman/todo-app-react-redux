@@ -7,27 +7,22 @@ import { getInitData } from './store/actions/todo'
 import { connect } from 'react-redux'
 
 import './styles/global.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App({ doneList, undoneList, loading, getInitList }) {
   useEffect(() => {
     getInitList()
   }, [])
+  
   return (
     <>
       <div className="container">
         <div className="inner">
           <Header />
-
-          <div className="grid col-2">
-            <div>
-              <TaskLists loading={loading} data={undoneList} />
-            </div>
-            <div>
-              <CompleteTasks loading={loading} data={doneList} />
-            </div>
+          <div className="grid col-2-gr">
+            <TaskLists loading={loading} data={undoneList} />
+            <CompleteTasks loading={loading} data={doneList} />
           </div>
-
-          {/* Complete Card */}
         </div>
       </div>
     </>
