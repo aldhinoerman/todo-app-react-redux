@@ -14,7 +14,7 @@ const CompleteTasks = (props) => {
     return (
         <>
             <div>
-                <h2 className="text-center">Complete</h2>
+                <h3 className="text-center">Complete</h3>
 
                 {loading ?
                     <p>Loading...</p> :

@@ -19,7 +19,7 @@ const TaskLists = (props) => {
     return (
         <>
             <div>
-                <h2 className="text-center">Tasks</h2>
+                <h3 className="text-center">Tasks</h3>
                 {loading ?
                     <p>Loading...</p> :
                     renderItem()
