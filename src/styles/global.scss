@@ -24,8 +24,6 @@ html {
     }
 }
 
-// Elements
-
 // Utils
 .container {
     max-width: 1024px;
@@ -59,4 +57,13 @@ html {
             grid-template-columns: 1fr 1fr;
         }
     }
+}
+
+.form-body {
+    margin: 2.5rem auto;
+    max-width: 350px;
+}
+
+.description-form {
+    margin: 1rem 0;
 }

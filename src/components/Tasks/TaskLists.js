@@ -20,7 +20,6 @@ const TaskLists = (props) => {
         <>
             <div>
                 <h2 className="text-center">Tasks</h2>
-                {/* Input data */}
                 {loading ?
                     <p>Loading...</p> :
                     renderItem()

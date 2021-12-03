@@ -8,8 +8,6 @@ import Card from '../Card'
 import TaskModal from '../TaskModal'
 import { doneActionTodo, undoneActionTodo } from '../../store/actions/todo'
 
-import './Tasks.scss'
-
 const Tasks = (props) => {
     const { data, done, index, actionDone, actionUndone } = props
     const [show, setShow] = useState(false)

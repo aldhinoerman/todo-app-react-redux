@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Header from './components/Header';
 import TaskLists from './components/Tasks/TaskLists';
 import CompleteTasks from './components/Tasks/CompleteTasks'
+import InputTask from './components/InputTask'
 
 import { getInitData } from './store/actions/todo'
 import { connect } from 'react-redux'
@@ -19,6 +20,7 @@ function App({ doneList, undoneList, loading, getInitList }) {
       <div className="container">
         <div className="inner">
           <Header />
+          <InputTask total={doneList.length + undoneList.length} />
           <div className="grid col-2-gr">
             <TaskLists loading={loading} data={undoneList} />
             <CompleteTasks loading={loading} data={doneList} />
